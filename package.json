@@ -1,0 +1,57 @@
+{
+  "name": "covid19-data-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz",
+    "lint": "eslint .",
+    "migrate-up": "migrate up --store=\"./migrationState/index\"",
+    "migrate-down": "migrate down --store=\"./migrationState/index\"",
+    "build": "npm run upgrade-database",
+    "serve": "nodemon -r dotenv/config index.js",
+    "start": "node -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigermarques/covid19-data-api.git"
+  },
+  "author": "João Marques <joao.gsilva.marques@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tigermarques/covid19-data-api/issues"
+  },
+  "homepage": "https://github.com/tigermarques/covid19-data-api#readme",
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3",
+    "migrate": "^1.6.2",
+    "mongodb": "^3.5.5",
+    "nodemon": "^2.0.2",
+    "validate-commit-message": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-parse": "^4.8.8",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.5",
+    "morgan": "^1.10.0",
+    "node-schedule": "^1.3.2",
+    "simple-git": "^1.132.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
